@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>글쓰기</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" 
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&family=Cute+Font&family=Do+Hyeon&family=Dokdo&family=East+Sea+Dokdo&family=Gaegu&family=Gamja+Flower&family=Gothic+A1&family=Gugi&family=Hi+Melody&family=Jua&family=Kirang+Haerang&family=Nanum+Brush+Script&family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR&family=Noto+Serif+KR&family=Poor+Story&family=Single+Day&family=Song+Myung&family=Stylish&family=Sunflower:wght@300&family=Yeon+Sung&display=swap" rel="stylesheet">
+    <script src="//cdn.ckeditor.com/4.19.1/full/ckeditor.js"></script>
+</head>
+<style>
+#p_boardWriteForm{
+	font-family: 'Jua', sans-serif;
+    justify-content: center;
+}
+#p_textWrite{
+    background-color: white;
+    height: 700px;
+    margin: auto 15%;
+    padding: 5px auto;
+    border-radius:10px;
+}
+#p_textOk{
+	background-color: #2fb86a;
+	border-color:#2fb86a;
+	color:white;
+	font-family: 'Noto Sans KR', sans-serif;
+	height :40px;
+	border-radius:10px;
+	border-width:1px;
+	width: 100px;
+	float: right;
+    position: relative;
+    right: 35%;
+}
+.p_title{
+	text-align:center;
+	font-family: 'Jua', sans-serif;
+	line-height:100px;
+	height:100px;
+}
+#p_textWrite{
+	font-family: 'Jua', sans-serif;
+    float: center;
+
+}
+</style>
+<script>
+	$(function(){
+		CKEDITOR.replace("content");
+
+		$("#p_boardWriteForm").submit(function(){
+			if($("#p_subject").val()==""){
+				alert("제목을 입력하세요.");
+				return false;
+			}
+			if(CKEDITOR.instances.content.getData()==""){
+				alert("글내용을 입력하세요.");
+				return false;
+			}
+			return true;
+		});
+	});
+
+</script>
+<body>
+    <div class="container">
+        <h1 class="p_title">글쓰기</h1>
+        <form method="post" action="" id="p_boardWriteForm">
+        <div id="p_textWrite">
+            <ul>
+                <li style="margin:10px;">제목</li>
+                <li><input type="text" name="subject" id="p_subject" style="width:66%; height:30px;"/></li>
+                <li><textarea name="content" id="content" style="width:66%; height:500px;"></textarea></li>
+                <li><input type="submit" value="글등록" id="p_textOk"/></li>
+            </ul>
+        </div>	
+        </form>		
+    </div>   
+</body>
+</html>

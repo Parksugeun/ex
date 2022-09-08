@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="jquery.fullPage.css">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" 
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="jquery.fullPage.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&family=Black+Han+Sans&family=Cute+Font&family=Do+Hyeon&family=Dokdo&family=East+Sea+Dokdo&family=Gaegu&family=Gamja+Flower&family=Gothic+A1&family=Gugi&family=Hi+Melody&family=Jua&family=Kirang+Haerang&family=Nanum+Brush+Script&family=Nanum+Gothic&family=Nanum+Gothic+Coding&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR&family=Noto+Serif+KR&family=Poor+Story&family=Single+Day&family=Song+Myung&family=Stylish&family=Sunflower:wght@300&family=Yeon+Sung&display=swap" rel="stylesheet">
+    <style>
+        header{
+            position: fixed;
+            left:0;
+            right:0;
+            top: 0;
+            background-color: #2fb86a;
+            height: 88px;
+            font-family: 'Noto Sans KR', sans-serif;
+            overflow: hidden;
+            z-index: 100;
+        }
+        footer{
+          position: absolute;
+          left:0;
+          right:0;
+          bottom: 0;
+          
+        }
+        header nav ul{
+            display: flex;
+        }
+        header nav ul li{
+            margin:10px 5px;
+            color: white;
+            font-weight: bold;
+            line-height: 50px;
+            padding: 0 15px;
+            justify-content: flex-end;
+            float: right;
+        }
+        .card-body{
+          height:300px;
+        }
+        .row{
+          display: flex;
+          overflow: initial;
+        }
+        .p_plogging-btn:hover{
+	      background-color: #2fb86a;
+        }
+        .p_plogging-btn{
+        background-color:white; border-radius:10px; border : 1px solid white; color:#2fb86a;
+        }
+    </style>
+    <script>
+        $(function(){
+
+            $('#fullpage').fullpage({
+                autoScrolling:true,
+                scrollHorizontally: true,
+                navigation:true,
+                navigationPosition:'left'
+
+            });
+        });  
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+            <span class="p_logo"><img src="./img/logo.png" ></span>
+                <span class="p_menu">
+                <li data-menuanchor="menu1"><a href="#">소개</a></li>
+                <li data-menuanchor="menu2"><a href="#">랭킹</a></li>
+                <li data-menuanchor="menu3"><a href="#">파티하기</a></li>
+                <li data-menuanchor="menu4"><a href="#">혼자하기</a></li>
+                <li data-menuanchor="menu5"><a href="board.html">게시판</a></li>
+                <li data-menuanchor="menu6"><a href="#">로그인</a></li>
+                <li data-menuanchor="menu7"><a href="#">회원가입</a></li>
+                </span>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="fullpage">
+            <section class="section">
+                <div class="p_mainContent">
+                    <div class="p_nav">
+                        <h3>함께하는 플로깅 <br/> Frog-ging</h3> <br/> 환경보호 활동과 운동을 한번에! <br/><br/>					
+                        <input type="button" value="함께하기" class="p_plogging-btn" onclick=""/>
+                        <input type="button" value="혼자하기" class="p_plogging-btn" onclick=""/>					
+                    </div>
+                    <div class="p_section">
+                        <h3>이번주 기록</h3> <h4>금주의 기록을 확인하세요!</h4><br/>
+                        <div class="p_section-ment">
+                        총 1050KG 의 쓰레기가 수거되었어요!<br/>
+                        총 30000 의 km을 걸으셨어요!<br/>
+                        총 130개 의 파티가 만들어졌어요!<br/>
+                        총 600번 의 프로깅이 기록되었어요!<br/>		
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="p_main-plogging" style="height: 800px;">
+                    <div class="p_plogging-ment" style="padding: 15%;">
+                        <h1 style="color:#2fb86a; font-family: 'Jua', sans-serif;">플로깅(plogging)?</h1><br/>
+                        <h5 style="font-family: 'Noto Sans KR', sans-serif;">
+                        스웨덴어의 '플로카 우프(plocka upp 줍다)'와 영어단어 조깅(jogging)을 합성한 단어로<br/>
+                        '쓰레기를 주으며 조깅하기'라는 의미에요.<br/>
+                        한국에서는 '줍다'와 '조깅'을 결합한 '줍깅'이라는 용어를 사용하기도 해요.<br/>
+                        조깅을 하는 동안 눈에 띄는 쓰레기를 줍는 일로, 운동으로 건강을 챙기는 동시에 환경을 지키기 위한<br/>
+                        작은 실천에 동참하자는 취지로 행하는 환경보호운동이라 할 수 있어요.<br/>
+                        </h5>
+                        <h1> </h1><br/>
+                        <a href="#">프로젝트 소개 보러가기</a>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <div class="p_main-event" style="padding: 10%; height: 800px; background-color: #ececec;">               
+                    <h2 style="font-weight: bold; font-family: 'Jua', sans-serif;">진행중인 이벤트</h2><br/>
+                    <h5>여러곳에서 진행하는 다양한 플로깅 이벤트를 확인해보세요.</h5>
+                    <br/>	
+                     <div class="container">
+                          <div class="row">
+                            <div class="col-4">
+                              <div class="card">
+                                <div class="card-header">
+                                  2022년 9월 15일~ 10월 17일
+                                </div>
+                                <div class="card-body">
+                                  <h5 class="card-title"></h5>
+                                  <img src="./img/event1.png" alt="이벤트" class="card-img" style="height: 70%; width:100%;" />
+                                  <p class="card-text"></p>
+                                  <a href="#" class="btn btn-primary" style="background-color:#2fb86a; border:1px solid #2fb86a;">이벤트 바로가기</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-4">						       
+                              <div class="card">
+                                  <div class="card-header">
+                                  2022년 9월 2일~ 10월 1일
+                                  </div>
+                                <img src="images/card-image.png" alt="" class="card-img-top" />
+                                <div class="card-body">
+                                  <h5 class="card-title"></h5>
+                                  <img src="./img/event2.png" alt="이벤트" class="card-img" style="height: 70%; width:100%;" />
+                                  <p class="card-text"></p>
+                                  <a href="#" class="btn btn-primary" style="background-color:#2fb86a; border:1px solid #2fb86a;">이벤트 바로가기</a>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-4">
+                              <div class="card">
+                                  <div class="card-header">
+                                    2022년 9월 7일~ 9월 28일
+                                  </div>
+                                <div class="card-body">
+                                  <h5 class="card-title"></h5>
+                                    <img src="./img/event3.png" alt="이벤트" class="card-img" style="height: 70%; width:100%;" />
+                                  <p class="card-text"></p>
+                                  <a href="#" class="btn btn-primary" style="background-color:#2fb86a; border:1px solid #2fb86a;">이벤트 바로가기</a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="p_event-btn-area">
+                            <input type="button" value="더보기" onclick="location.href='eventList.html';" class="p_event-btn">
+                          </div>
+                        </div>
+                        
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+                        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>  
+                   </div>
+                   <!--
+                   <footer>
+                    <div class="footer-information">
+                    (주) Frog-ging: s개굴2 <br/>
+                    소재지:<br/>
+                    연락처:02-1234-1234<br/>
+                    (9:00am ~ 18:00pm)/토,일,공휴일 휴무<br/>
+                    </div>
+                    <div class="footer-logo">
+                    환경보호 활동과 운동을 한번에!<br/>
+                    함께하는 플로깅 <img src="./img/logo.png"/>
+                    </div> 
+                    </footer>
+                    -->    
+            </section>  
+         </div>
+    </main>
+    <footer>
+      
+    </footer>
+</body>
+</html>
